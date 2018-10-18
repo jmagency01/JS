@@ -5,6 +5,50 @@
     Нужно определить - является ли треугольник с заданными координатами прямоугольным.
 */
 console.log('Задача №1');
+// a=x; b=y; c=z; - все из под выподверта)
+let x1 = 1;
+let x2 = 3;
+let y1 = 4;
+let y2 = 2;
+let z1 = 1;
+let z2 = 2;
+
+let ab1 = y1 - x1;
+let ab2 = y2 - x2;
+let AB = ((ab1*ab1)+(ab2*ab2));
+console.log(AB);
+let ac1 = z1 - x1;
+let ac2 = z2 - x2;
+let AC = ((ac1*ac1)+(ac2*ac2));
+console.log(AC);
+let bc1 = z1 - x1;
+let bc2 = z2 - y2;
+let BC = ((bc1*bc1)+(bc2*bc2));
+console.log(BC);
+if (AC>BC>AB) {
+    let C = AC;
+    let A = BC;
+    let B = AB;
+} else if (BC>AC>AB){
+    C = BC;
+    A = AC;
+    B = AB;
+} else if (AB>AC>BC){
+    C = AB;
+    A = AC;
+    B = BC;
+}
+
+if (C > (A + B) || C < (A + B)){
+    console.log('Треугольник  не является прямоугольным');
+}
+else {
+    console.log('Треугольник является прямоугольным');
+}
+
+
+
+/* ЭТО КОРОЧЕ НЕПРАВИЛЬНЫЙ ПОДХОД
 let x1 = 10;
 let x2 = 0;
 let y1 = 0;
@@ -14,6 +58,7 @@ let z2 = 0;
 if (x1 === y1 || x1 === z1 || y1 === z1 && x2 === y2 || x2 === z2 || y2 === z2) {
     console.log('Треугольник является прямоугольным');
 } else console.log('Треугольник не является прямоугольным');
+*/
 
 
 /*Задача 2*
